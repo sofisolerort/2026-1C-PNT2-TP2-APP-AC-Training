@@ -9,8 +9,9 @@ const userRoutes = Router();
 userRoutes.post("/", userController.createUser);
 userRoutes.post("/login", userController.login);
 
-// Ruta para cualquier logueado (ver datos propios)
+// Rutas para cualquier logueado
 userRoutes.get("/me", authMiddleware, userController.me);
+userRoutes.post("/logout", authMiddleware, userController.logout);
 
 // Rutas solo para TRAINER (roleId = 1)
 userRoutes.get("/", authMiddleware, requireRole(1), userController.getAllUsers);

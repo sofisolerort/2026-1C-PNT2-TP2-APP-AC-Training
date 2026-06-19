@@ -56,6 +56,17 @@ class UserController {
       res.status(400).send({ success: false, message: error.message });
     }
   };
+
+  logout = async (req, res) => {
+    try {
+      res.clearCookie("token");
+      res
+        .status(200)
+        .send({ success: true, message: "Sesión cerrada correctamente" });
+    } catch (error) {
+      res.status(400).send({ success: false, message: error.message });
+    }
+  };
 }
 
 export default UserController;
