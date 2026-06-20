@@ -146,6 +146,19 @@ Deberías ver dos filas: trainer (id=1) y cliente (id=2).
 | PUT    | /rutinas/:id | Actualizar rutina         |
 | DELETE | /rutinas/:id | Eliminar rutina           |
 
+## Probar la API con Postman
+
+Para probar la API rápido, importá la colección incluida en el proyecto:
+
+1. Abrí Postman.
+2. Click en "Import" arriba a la izquierda.
+3. Seleccioná el archivo `docs/AC-Training-Backend.postman_collection.json`.
+4. Click en "Import".
+
+Vas a tener todos los endpoints listos para usar.
+
+**Importante**: configurá un environment con la variable `baseUrl` apuntando a `http://localhost:3000` antes de probar.
+
 ## Autor
 
 Sofía Soler
